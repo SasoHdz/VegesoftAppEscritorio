@@ -1,0 +1,103 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+
+
+header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title {
+    margin-top: 40px;
+    color: #52973C;
+}
+
+.logo {
+    width: 192px;
+    height: 147px;
+}
+
+.cont-title {
+    height: 100%;
+    width: 60%;
+}
+
+.baner {
+    background-color: #CAFCDC;
+    color: #52973C;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    height: 320px;
+}
+
+.container {
+    width: 50%;
+    height: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.card {
+    width: 250px;
+    height: 140px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+    transition:linear 0.3s;
+    cursor: pointer;
+}
+
+.cont-icon {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.cont-icon i {
+    margin: 0 auto;
+    color: white;
+    font-size: 3.2rem;
+}
+
+.cont-text {
+    text-align: center;
+}
+
+.cont-text p {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.c1 {
+    background-color: #3CC970;
+}
+
+.c2 {
+    background-color: #986AA3;
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+    background-color: #986AA3;
+}
