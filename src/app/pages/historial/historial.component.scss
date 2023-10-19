@@ -1,3 +1,121 @@
-h3 {
-  color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mooli&family=Nunito:wght@300;900&family=Poppins:wght@300;800&family=Raleway:wght@200&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.container-man {
+  flex: 4;
+  width: 80%; /* Ocupa el 75% del ancho total */
+  height: 100vh;
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  color: #4D4957;
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: #DFDDC5;
+  padding: 10px;
+}
+
+.title h1 {
+  padding: 8px 0 0 0;
+  margin: 0;
+}
+
+.container-config {
+  display: flex;
+}
+
+.container-items {
+  width: 60%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.container-items input {
+  margin: 20px 0;
+  width: 60%;
+  height: 40px;
+  border-radius: 10px;
+  border: solid #2AA1AF 1px;
+  box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
+  -webkit-box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
+  -moz-box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
+}
+
+.items {
+  width: 80%;
+  height: 450px;
+  background-color: #DFDDC5;
+}
+
+.form-item {
+  width: 40%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 28px 0;
+}
+
+.form-item button {
+  margin-top: 40px;
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  background-color: #10455b;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+form {
+  width: 90%;
+  height: 330px;
+  background-color: #DFDDC5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.campo-form {
+  width: 90%;
+  height: 35px;
+}
+
+.campo-form label {
+  margin-right: 10px;
+}
+
+.campo-form input {
+  height: 25px;
+  width: auto;
+  border-radius: 10px;
+  border: none;
+}
+
+.campo-form input:hover {
+  border: solid 1px rgba(119,73,248,0.81);
+  box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
+  -webkit-box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
+  -moz-box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
 }

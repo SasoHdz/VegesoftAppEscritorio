@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mooli&family=Nunito:wght@300;900&family=Poppins:wght@300;800&family=Raleway:wght@200&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
 main {
   height: auto;
   margin: 0;
@@ -6,7 +12,7 @@ main {
 }
 
 nav {
-  background-color: #986aa3;
+  background-color: #10455b;
   flex: 1;
   width: 20%; /* Ocupa el 25% del ancho total */
   height: 100vh;
@@ -35,7 +41,7 @@ nav {
   flex: 4;
   width: 80%; /* Ocupa el 75% del ancho total */
   height: 100vh;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   box-sizing: border-box;
 }
 
@@ -44,8 +50,16 @@ nav {
   height: 50px;
   text-align: center;
   align-items: center;
-  color: #52973C;
-  font-size: 1.3rem;
+  color: #4D4957;
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: #DFDDC5;
+  padding: 10px;
+}
+
+.title h1 {
+  padding: 8px 0 0 0;
+  margin: 0;
 }
 
 .container-config {
@@ -62,19 +76,20 @@ nav {
 }
 
 .container-items input {
+  margin: 20px 0;
   width: 60%;
   height: 40px;
-  border-radius: 20px;
-  border: solid #655494 1px;
-  box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
-  -webkit-box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
-  -moz-box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
+  border-radius: 10px;
+  border: solid #2AA1AF 1px;
+  box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
+  -webkit-box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
+  -moz-box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
 }
 
 .items {
   width: 80%;
   height: 450px;
-  background-color: #D9D9D9;
+  background-color: #DFDDC5;
 }
 
 .form-item {
@@ -83,6 +98,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 28px 0;
 }
 
 .form-item button {
@@ -91,7 +107,7 @@ nav {
   height: 35px;
   border-radius: 20px;
   border: none;
-  background-color: #28A745;
+  background-color: #10455b;
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -100,7 +116,7 @@ nav {
 form {
   width: 90%;
   height: 330px;
-  background-color: #D9D9D9;
+  background-color: #DFDDC5;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
