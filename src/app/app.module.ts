@@ -7,6 +7,7 @@ import { ConfigComponent } from './pages/config/config.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HistorialComponent } from './pages/historial/historial.component';
 import { MenuVerticalComponent } from './components/menu-vertical/menu-vertical.component';
+import { PrductoComponent } from './components/prducto/prducto.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MenuVerticalComponent } from './components/menu-vertical/menu-vertical.
     ConfigComponent,
     HomeComponent,
     HistorialComponent,
-    MenuVerticalComponent
+    MenuVerticalComponent,
+    PrductoComponent
   ],
   imports: [
     BrowserModule,
