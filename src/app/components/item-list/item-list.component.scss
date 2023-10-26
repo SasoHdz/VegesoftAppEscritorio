@@ -1,0 +1,49 @@
+.campo {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #10455b;
+}
+
+.id {
+  height: 35px;
+  width: 120px;
+  margin-left: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.desc {
+  height: 35px;
+  width: 490px;
+  margin-left: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campo input {
+  height: 25px;
+  width: auto;
+  border-radius: 10px;
+  border: none;
+}
+
+.campo input:hover {
+  border: solid 1px rgba(119,73,248,0.81);
+  box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
+  -webkit-box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
+  -moz-box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
+}

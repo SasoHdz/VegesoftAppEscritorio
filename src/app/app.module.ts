@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HistorialComponent } from './pages/historial/historial.component';
 import { MenuVerticalComponent } from './components/menu-vertical/menu-vertical.component';
 import { PrductoComponent } from './components/prducto/prducto.component';
+import { ItemListComponent } from './components/item-list/item-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PrductoComponent } from './components/prducto/prducto.component';
     HomeComponent,
     HistorialComponent,
     MenuVerticalComponent,
-    PrductoComponent
+    PrductoComponent,
+    ItemListComponent
   ],
   imports: [
     BrowserModule,

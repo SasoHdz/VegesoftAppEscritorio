@@ -7,31 +7,8 @@
     <div class="container-config">
       <div class="container-items">
         <input type="text" name="Buscar Producto" id="" />
-        <div class="items">
-          <div class="campo">
-            <div class="id">
-              <label>0001</label>
-            </div>
-            <div class="desc">
-              <label>Aguacate de bola 30$ X 1 kilo</label>
-            </div>
-          </div>
-          <div class="campo">
-            <div class="id">
-              <label>0001</label>
-            </div>
-            <div class="desc">
-              <label>Aguacate de bola 30$ X 1 kilo</label>
-            </div>
-          </div>
-          <div class="campo">
-            <div class="id">
-              <label>0001</label>
-            </div>
-            <div class="desc">
-              <label>Aguacate de bola 30$ X 1 kilo</label>
-            </div>
-          </div>
+        <div *ngFor="let item of productos" class="items">
+          <app-item-list [id]="item.id" [desc]="item.desc" ></app-item-list>
         </div>
       </div>
     </div>
