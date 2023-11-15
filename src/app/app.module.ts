@@ -11,6 +11,8 @@ import { PrductoComponent } from './components/prducto/prducto.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { IniciarComponent } from './pages/iniciar/iniciar.component';
 import { InventarioComponent } from './pages/inventario/inventario.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { InventarioComponent } from './pages/inventario/inventario.component';
     PrductoComponent,
     ItemListComponent,
     IniciarComponent,
-    InventarioComponent
+    InventarioComponent,
+    HeaderComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
