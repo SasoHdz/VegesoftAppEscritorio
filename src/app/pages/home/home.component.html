@@ -1,6 +1,8 @@
 
 <header class="header">
-  <img src="./assets/logo.png" alt="" class="logo" />
+  <div class="backLogo">
+    <img src="./assets/logo.png" alt="" class="logo" />
+  </div>
   <div class="cont-title">
     <h1 class="title"> BIENVENIDO A VEGESOFT</h1>
     <p class="baner">"Tu punto de venta inteligente. Juntos mejoramos tu negocio."</p>
@@ -8,7 +10,7 @@
 </header>
 <main>
   <div class="container">
-    <div class="card c1">
+    <div class="card c2">
       <div class="cont-icon">
         <i class="bi bi-gear-wide-connected"></i>
       </div>
@@ -20,7 +22,7 @@
       <div class="cont-icon">
         <i class="bi bi-bookmark-check-fill"></i>
       </div>
-      <div class="cont-text">
+      <div routerLink="/iniciar" class="cont-text">
         <p>Iniciar Sistema</p>
       </div>
     </div>
@@ -28,15 +30,15 @@
       <div class="cont-icon">
         <i class="bi bi-card-list"></i>
       </div>
-      <div class="cont-text">
+      <div routerLink="/inventario" class="cont-text">
         <p>Inventario</p>
       </div>
     </div>
-    <div class="card c1">
+    <div class="card c2">
       <div class="cont-icon">
         <i class="bi bi-clipboard2-data"></i>
       </div>
-      <div class="cont-text">
+      <div routerLink="/history" class="cont-text">
         <p>Historial</p>
       </div>
     </div>

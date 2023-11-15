@@ -6,11 +6,12 @@
 }
 
 header {
-    background-color: #DFDDC5;
+    background-color: #10455B;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
+    color: #DFDDC5;
 }
 
 .cont-title {
@@ -18,7 +19,7 @@ header {
 }
 
 .title {
-    color: #4D4957;
+    color: #f5f4f8;
     margin: 25px 0 15px 0;
     font-size: 30px;
     letter-spacing: 2px;
@@ -29,11 +30,19 @@ header {
     height: 115px;
     padding: 5px;
     border-radius: 50%;
-    margin: 0 0 0 0;
+    margin-right: 10px;
+}
+
+.backLogo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fafaf8;
+
 }
 
 .baner {
-    color: #4D4957;
+    color: #ebe9f0;
     font-size: 1.2rem;
     font-weight: lighter;
     text-align: center;
@@ -102,7 +111,8 @@ main {
 }
 
 .footer {
-    background-color: #DFDDC5;
+    background-color: #10455B;
+    color: white;
     margin-top: 20px;
     width: 100%;
     height: 60px;
