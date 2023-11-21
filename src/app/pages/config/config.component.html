@@ -10,6 +10,11 @@
           <app-campo-form [name]="'Unidad'" [nameId]="'unidad'" />
           <app-campo-form [name]="'Descripcion'" [nameId]="'desc'" />
         </form>
+        <app-button-success [texto]="'Agregar Producto'"></app-button-success>
+        <form action="" class="deleteProduct">
+          <app-campo-form [name]="'ID:'" [nameId]="'id'"></app-campo-form>
+        </form>
+        <app-button-stop [texto]="'Eliminar Producto'"></app-button-stop>
       </div>
       <div class="container-items">
         <input type="text" name="Buscar Producto" id="" />

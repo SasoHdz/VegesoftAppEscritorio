@@ -14,6 +14,8 @@ import { InventarioComponent } from './pages/inventario/inventario.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { CampoFormComponent } from './components/campo-form/campo-form.component';
+import { ButtonSuccessComponent } from './components/button-success/button-success.component';
+import { ButtonStopComponent } from './components/button-stop/button-stop.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { CampoFormComponent } from './components/campo-form/campo-form.component
     InventarioComponent,
     HeaderComponent,
     LayoutComponent,
-    CampoFormComponent
+    CampoFormComponent,
+    ButtonSuccessComponent,
+    ButtonStopComponent
   ],
   imports: [
     BrowserModule,
