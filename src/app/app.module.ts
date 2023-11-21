@@ -13,6 +13,7 @@ import { IniciarComponent } from './pages/iniciar/iniciar.component';
 import { InventarioComponent } from './pages/inventario/inventario.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { CampoFormComponent } from './components/campo-form/campo-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     IniciarComponent,
     InventarioComponent,
     HeaderComponent,
-    LayoutComponent
+    LayoutComponent,
+    CampoFormComponent
   ],
   imports: [
     BrowserModule,

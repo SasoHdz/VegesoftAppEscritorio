@@ -3,6 +3,14 @@
   <div class="container-man">
     <app-header [titulo]="'CONFIGURACION'"></app-header>
     <div class="container-config">
+      <div class="container-producto">
+        <form action="" class="addProduct">
+          <app-campo-form [name]="'Nombre'" [nameId]="'name'" />
+          <app-campo-form [name]="'Precio por unidad'" [nameId]="'precio_unidad'" />
+          <app-campo-form [name]="'Unidad'" [nameId]="'unidad'" />
+          <app-campo-form [name]="'Descripcion'" [nameId]="'desc'" />
+        </form>
+      </div>
       <div class="container-items">
         <input type="text" name="Buscar Producto" id="" />
         <div *ngFor="let item of productos" class="items">

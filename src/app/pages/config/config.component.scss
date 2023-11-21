@@ -11,32 +11,6 @@ main {
   flex-direction: row;
 }
 
-nav {
-  background-color: #10455b;
-  flex: 1;
-  width: 20%; /* Ocupa el 25% del ancho total */
-  height: 100vh;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container-logo {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  background-color: white;
-  margin-top: 10px;
-}
-
-.container-logo img {
-  width: 145px;
-  height: 145px;
-  margin: 0 auto 15px;
-}
-
 .container-man {
   flex: 4;
   width: 80%; /* Ocupa el 75% del ancho total */
@@ -45,51 +19,55 @@ nav {
   box-sizing: border-box;
 }
 
-.title {
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  align-items: center;
-  color: #4D4957;
-  font-size: 15px;
-  letter-spacing: 2px;
-  background-color: #DFDDC5;
-  padding: 10px;
-}
-
-.title h1 {
-  padding: 8px 0 0 0;
-  margin: 0;
-}
-
 .container-config {
-  //background-color: #2AA1AF;
+  background-color: #2AA1AF;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
 }
 
 .container-items {
-  width: 950px;
+  width: 50%;
   height: 80vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
- background-color: #4D4957;
+  background-color: #DFDDC5;
 }
 
 .container-items input {
   margin: 20px;
-  width: 60%;
-  height: 60px;
-  border-radius: 10px;
+  width: 90%;
+  height: 80px;
+  border-radius: 5px;
   border: solid #2AA1AF 1px;
+  /* border: solid #2AA1AF 1px;
   box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
   -webkit-box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
-  -moz-box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
+  -moz-box-shadow: 3px 0px 15px -3px rgba(42, 161, 175); */
+}
+
+.container-producto {
+  background-color: red;
+  width: 50%;
+  height: auto;
+}
+
+.addProduct {
+  background-color: #DFDDC5;
+  width: 400px;
+  height: 330px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .items {
-  width: 80%;
+  width: 90%;
   height: 130px;
   margin-left: 20px;
   background-color: #DFDDC5;
