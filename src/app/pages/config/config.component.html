@@ -11,19 +11,19 @@
           </div>
           <div class="campo2">
             <label>Precio por unidad:</label>
-            <input type="number" name="precio" id="precio" [(ngModel)]="newProducto.precioU"/>
+            <input type="number" name="precio" id="precio" [(ngModel)]="newProducto.precioU" [ngModelOptions]="{standalone: true}"/>
           </div>
           <div class="campo2">
             <label>Unidad:</label>
-            <input type="text" name="unidad" id="unidad" [(ngModel)]="newProducto.unidad"/>
+            <input type="text" name="unidad" id="unidad" [(ngModel)]="newProducto.unidad" [ngModelOptions]="{standalone: true}"/>
           </div>
           <div class="campo2">
             <label>ID:</label>
-            <input type="text" name="unidad" id="unidad" [(ngModel)]="newProducto.id"/>
+            <input type="text" name="unidad" id="unidad" [(ngModel)]="newProducto.id" [ngModelOptions]="{standalone: true}"/>
           </div>
           <div class="campo2">
             <label>Descripcio:</label>
-            <input type="text" name="desc" id="desc" [(ngModel)]="newProducto.descripcion"/>
+            <input type="text" name="desc" id="desc" [(ngModel)]="newProducto.descripcion" [ngModelOptions]="{standalone: true}"/>
           </div>
           <div *ngIf="!validarForm"  class="bg-warning bg-gradient text-light">
             Los campos no se han llenado completamente
@@ -34,9 +34,13 @@
           (click)="addProduct()"
         ></app-button-success>
         <form action="" class="deleteProduct">
-          <app-campo-form [name]="'ID:'" [nameId]="'id'"></app-campo-form>
+          <label class="me-4">ID:</label>
+          <select class="form-select w-75" aria-label="Default select example"  [(ngModel)]="currentID" [ngModelOptions]="{standalone: true}">
+            <option selected>Open this select menu</option>
+            <option *ngFor="let item of ids" [value]="item">{{item}}</option>
+          </select>
         </form>
-        <app-button-stop [texto]="'Eliminar Producto'"></app-button-stop>
+        <app-button-stop [texto]="'Eliminar Producto'" (click)="deleteProduct()"></app-button-stop>
       </div>
       <div class="container-items">
         <input

@@ -10,6 +10,7 @@ export class ConfigComponent {
 
   newProducto: Producto = new Producto("","","",0,"");
   validarForm: boolean = true;
+  currentID : string = "";
 
   word = ""
   productosBase: Producto[] = [
@@ -23,13 +24,11 @@ export class ConfigComponent {
     new Producto("Uva", "008", "KG", 3.5, "Uvas dulces y jugosas"),
     new Producto("Pimiento", "009", "KG", 2.3, "Pimientos frescos y coloridos"),
     new Producto("Sandía", "010", "KG", 4.0, "Sandías jugosas y perfectas para el verano"),
-    new Producto("Uva", "008", "KG", 3.5, "Uvas dulces y jugosas"),
-    new Producto("Pimiento", "009", "KG", 2.3, "Pimientos frescos y coloridos"),
-    new Producto("Sandía", "010", "KG", 4.0, "Sandías jugosas y perfectas para el verano"),
+
   ];
 
   productos: Producto[] = [...this.productosBase]
-
+  ids: string[] = [...this.productosBase.map(e=>e.id)];
 
 
   searchProduct() {
@@ -49,8 +48,16 @@ export class ConfigComponent {
       this.newProducto.generateDesc();
       this.productosBase.push(this.newProducto);
       this.productos = [...this.productosBase];
+      this.ids = [...this.productosBase.map(e=>e.id)];
       this.newProducto = new Producto("","","",0,"");
     }
+  }
 
+  deleteProduct(){
+    console.log(this.currentID);
+    const index = this.productosBase.findIndex(p=>p.id === this.currentID);
+    this.productosBase.splice(index,1);
+    this.productos = [...this.productosBase];
+    this.currentID="";
   }
 }
