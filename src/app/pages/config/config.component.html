@@ -17,9 +17,9 @@
         <app-button-stop [texto]="'Eliminar Producto'"></app-button-stop>
       </div>
       <div class="container-items">
-        <input type="text" name="Buscar Producto" id="" />
-        <div *ngFor="let item of productos" class="items">
-          <app-item-list [id]="item.id" [desc]="item.desc" ></app-item-list>
+        <input type="text" name="Buscar Producto" id="" [(ngModel)]="word" (ngModelChange)="searchProduct()"/>
+        <div class="items">
+          <app-item-list *ngFor="let item of productos" [id]="item.id" [desc]="item.desc" ></app-item-list>
         </div>
       </div>
     </div>

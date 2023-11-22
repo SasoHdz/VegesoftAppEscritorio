@@ -39,11 +39,11 @@ main {
 }
 
 .container-items input {
-  margin: 20px;
   width: 90%;
-  height: 80px;
+  height: 40px;
   border-radius: 5px;
   border: solid #2aa1af 1px;
+  margin: 0 auto;
   /* border: solid #2AA1AF 1px;
   box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
   -webkit-box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
@@ -84,7 +84,7 @@ main {
 
 .items {
   width: 90%;
-  height: 130px;
+  height: 415px;
   margin-left: 20px;
   background-color: #dfddc5;
   overflow: hidden;
