@@ -60,7 +60,7 @@ main {
 
 .addProduct {
   width: 446px;
-  height: 260px;
+  height: 280px;
   flex-shrink: 0;
   background-color: #dfddc5;
   display: flex;
@@ -87,7 +87,7 @@ main {
   height: 415px;
   margin-left: 20px;
   background-color: #dfddc5;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .campo {
@@ -142,3 +142,33 @@ button:hover {
   transform: scale(1.1);
   opacity: 0.7;
 }
+
+.campo2 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  label {
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    display: block; /* Asegura que cada label ocupe su propio espacio en vertical */
+    width: 135px; /* Establece un ancho máximo para el label */
+    word-wrap: break-word; /* Para navegadores más antiguos */
+    overflow-wrap: break-word;
+  }
+
+  input {
+    height: 30px;
+    width: 180px;
+    border-radius: 5px;
+    border:none;
+  }
+}
+

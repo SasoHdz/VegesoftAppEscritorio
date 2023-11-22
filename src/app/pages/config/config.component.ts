@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Producto } from 'src/app/Models/Producto';
 
 @Component({
   selector: 'app-config',
@@ -6,19 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./config.component.scss']
 })
 export class ConfigComponent {
-  word = ""
-  productosBase: any[] = [
-    {id: "0003", desc: "Cebolla Blanca 13$ X 1 Kilo"},
-    {id: "0004", desc: "Naranja  18$ X 1 Kilo"},
-    {id: "0005", desc: "Calabaza Bola 19.4$ X 1 Kilo"},
-    {id: "0006", desc: "Uva sin semilla 17.5$ X 1 Kilo"},
-    {id: "0003", desc: "Cebolla Blanca 13$ X 1 Kilo"},
-    {id: "0004", desc: "Naranja  18$ X 1 Kilo"},
-    {id: "0005", desc: "Calabaza Bola 19.4$ X 1 Kilo"},
-    {id: "0006", desc: "Uva sin semilla 17.5$ X 1 Kilo"},
-  ]
 
-  productos: any[] = [...this.productosBase]
+  newProducto: Producto = new Producto("","","",0,"");
+  validarForm: boolean = true;
+
+  word = ""
+  productosBase: Producto[] = [
+    new Producto("Manzana", "001", "KG", 2.5, "Manzanas frescas y deliciosas"),
+    new Producto("Plátano", "002", "KG", 1.8, "Plátanos maduros y dulces"),
+    new Producto("Naranja", "003", "KG", 3.0, "Naranjas jugosas y llenas de vitamina C"),
+    new Producto("Pera", "004", "KG", 2.2, "Peras jugosas y sabrosas"),
+    new Producto("Zanahoria", "005", "KG", 2.0, "Zanahorias frescas y crujientes"),
+    new Producto("Pepino", "006", "KG", 1.5, "Pepinos verdes y refrescantes"),
+    new Producto("Tomate", "007", "KG", 2.8, "Tomates rojos y deliciosos"),
+    new Producto("Uva", "008", "KG", 3.5, "Uvas dulces y jugosas"),
+    new Producto("Pimiento", "009", "KG", 2.3, "Pimientos frescos y coloridos"),
+    new Producto("Sandía", "010", "KG", 4.0, "Sandías jugosas y perfectas para el verano"),
+    new Producto("Uva", "008", "KG", 3.5, "Uvas dulces y jugosas"),
+    new Producto("Pimiento", "009", "KG", 2.3, "Pimientos frescos y coloridos"),
+    new Producto("Sandía", "010", "KG", 4.0, "Sandías jugosas y perfectas para el verano"),
+  ];
+
+  productos: Producto[] = [...this.productosBase]
 
 
 
@@ -33,6 +43,14 @@ export class ConfigComponent {
   }
 
   addProduct(){
+    console.log(this.productosBase.find(p=>p.id==this.newProducto.id));
+    this.validarForm = this.newProducto.validarAtributos()
+    if(this.validarForm){
+      this.newProducto.generateDesc();
+      this.productosBase.push(this.newProducto);
+      this.productos = [...this.productosBase];
+      this.newProducto = new Producto("","","",0,"");
+    }
 
   }
 }

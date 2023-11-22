@@ -5,21 +5,53 @@
     <div class="container-config">
       <div class="container-producto">
         <form action="" class="addProduct">
-          <app-campo-form [name]="'Nombre'" [nameId]="'name'" />
-          <app-campo-form [name]="'Precio por unidad'" [nameId]="'precio_unidad'" />
-          <app-campo-form [name]="'Unidad'" [nameId]="'unidad'" />
-          <app-campo-form [name]="'Descripcion'" [nameId]="'desc'" />
+          <div class="campo2">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" id="nombre" [(ngModel)]="newProducto.name"/>
+          </div>
+          <div class="campo2">
+            <label>Precio por unidad:</label>
+            <input type="number" name="precio" id="precio" [(ngModel)]="newProducto.precioU"/>
+          </div>
+          <div class="campo2">
+            <label>Unidad:</label>
+            <input type="text" name="unidad" id="unidad" [(ngModel)]="newProducto.unidad"/>
+          </div>
+          <div class="campo2">
+            <label>ID:</label>
+            <input type="text" name="unidad" id="unidad" [(ngModel)]="newProducto.id"/>
+          </div>
+          <div class="campo2">
+            <label>Descripcio:</label>
+            <input type="text" name="desc" id="desc" [(ngModel)]="newProducto.descripcion"/>
+          </div>
+          <div *ngIf="!validarForm"  class="bg-warning bg-gradient text-light">
+            Los campos no se han llenado completamente
+          </div>
         </form>
-        <app-button-success [texto]="'Agregar Producto'"></app-button-success>
+        <app-button-success
+          [texto]="'Agregar Producto'"
+          (click)="addProduct()"
+        ></app-button-success>
         <form action="" class="deleteProduct">
           <app-campo-form [name]="'ID:'" [nameId]="'id'"></app-campo-form>
         </form>
         <app-button-stop [texto]="'Eliminar Producto'"></app-button-stop>
       </div>
       <div class="container-items">
-        <input type="text" name="Buscar Producto" id="" [(ngModel)]="word" (ngModelChange)="searchProduct()"/>
+        <input
+          type="text"
+          name="Buscar Producto"
+          id=""
+          [(ngModel)]="word"
+          (ngModelChange)="searchProduct()"
+        />
         <div class="items">
-          <app-item-list *ngFor="let item of productos" [id]="item.id" [desc]="item.desc" ></app-item-list>
+          <app-item-list
+            *ngFor="let item of productos"
+            [id]="item.id"
+            [desc]="item.desc"
+          ></app-item-list>
         </div>
       </div>
     </div>

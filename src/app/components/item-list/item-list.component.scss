@@ -23,7 +23,7 @@
 
 
 .desc {
-  height: 35px;
+  height: 40px;
   width: 490px;
   margin-left: 20px;
   border-radius: 10px;
@@ -32,6 +32,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.desc label {
+  display: block; /* Asegura que cada label ocupe su propio espacio en vertical */
+  word-wrap: break-word;
 }
 
 .campo input {
