@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mooli&family=Nunito:wght@300;900&family=Poppins:wght@300;800&family=Raleway:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mooli&family=Nunito:wght@300;900&family=Poppins:wght@300;800&family=Raleway:wght@200&display=swap");
 
 * {
-    font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 main {
@@ -20,7 +20,6 @@ main {
 }
 
 .container-config {
-  background-color: #2AA1AF;
   width: 100%;
   height: auto;
   display: flex;
@@ -36,15 +35,15 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  background-color: #DFDDC5;
+  background-color: #dfddc5;
 }
 
 .container-items input {
-  margin: 20px;
   width: 90%;
-  height: 80px;
+  height: 40px;
   border-radius: 5px;
-  border: solid #2AA1AF 1px;
+  border: solid #2aa1af 1px;
+  margin: 0 auto;
   /* border: solid #2AA1AF 1px;
   box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
   -webkit-box-shadow: 3px 0px 15px -3px rgba(42, 161, 175);
@@ -52,28 +51,44 @@ main {
 }
 
 .container-producto {
-  background-color: red;
   width: 50%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .addProduct {
-  background-color: #DFDDC5;
-  width: 400px;
-  height: 330px;
-  padding-top: 30px;
+  width: 446px;
+  height: 260px;
+  flex-shrink: 0;
+  background-color: #dfddc5;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.deleteProduct {
+  width: 400px;
+  height: 85px;
+  flex-shrink: 0;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfddc5;
+  margin: 20px 0px 20px 0px;
+
 }
 
 .items {
   width: 90%;
-  height: 130px;
+  height: 415px;
   margin-left: 20px;
-  background-color: #DFDDC5;
+  background-color: #dfddc5;
   overflow: hidden;
 }
-
 
 .campo {
   width: 95%;
@@ -97,8 +112,6 @@ main {
   justify-content: center;
 }
 
-
-
 .desc {
   height: 35px;
   width: 490px;
@@ -119,12 +132,11 @@ main {
 }
 
 .campo input:hover {
-  border: solid 1px rgba(119,73,248,0.81);
-  box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
-  -webkit-box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
-  -moz-box-shadow: 3px 0px 25px -3px rgba(119,73,248,0.81);
+  border: solid 1px rgba(119, 73, 248, 0.81);
+  box-shadow: 3px 0px 25px -3px rgba(119, 73, 248, 0.81);
+  -webkit-box-shadow: 3px 0px 25px -3px rgba(119, 73, 248, 0.81);
+  -moz-box-shadow: 3px 0px 25px -3px rgba(119, 73, 248, 0.81);
 }
-
 
 button:hover {
   transform: scale(1.1);
