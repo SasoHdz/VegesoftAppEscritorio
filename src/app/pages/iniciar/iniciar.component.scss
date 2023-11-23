@@ -25,7 +25,7 @@ main {
 
 .productos {
   width: 88%;
-  height: 458px;
+  height: 410px;
   flex-shrink: 0;
   background: #DFDDC5;
 }
@@ -40,6 +40,24 @@ table {
   }
 }
 
+.image {
+  font-size: 10rem;
+  color: #10455B;
+  margin-bottom: -35px !important;
+  margin-top: -50px !important;
 
+}
+
+.producto {
+  width: 90%;
+  height: 50px;
+  background-color: #DFDDC5;
+}
+
+.descProducto {
+  width: 90%;
+  height: 150px;
+  background-color: #DFDDC5;
+}
 
 
