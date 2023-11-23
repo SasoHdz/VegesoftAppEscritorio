@@ -6,140 +6,36 @@
         <p>Fecha:</p>
         <input type="text" name="fecha" placeholder="Fecha">
         <p>Producto:</p>
-        <input type="text" name="producto" placeholder="Producto">
+        <input type="text" name="producto" placeholder="Producto" [(ngModel)]="word" (ngModelChange)="searchVenta()">
         <p>Cajero:</p>
         <input type="text" name="cajero" placeholder="Cajero">
       </div>
       <div class="container-center">
-        <div class="component">
-          <p>Hora:</p>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-        </div>
-        <div class="component">
-          <p>Cantidad:</p>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-        </div>
-        <div class="component">
-          <p>Producto:</p>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-        </div>
-        <div class="component">
-          <p>Cajero:</p>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-        </div>
-        <div class="component">
-          <p>Total:</p>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
-          <div class="com-cen">
-            <p></p>
-          </div>
+        <div class="tabla">
+          <tr class="titulos-tabla">
+            <td>Hora:</td>
+            <td>Cantidad KG:</td>
+            <td>Producto:</td>
+            <td>Cajero:</td>
+            <td>Total $:</td>
+          </tr>
+          <app-item-list-venta *ngFor="let item of venta"
+            [hora]="item.hora"
+            [cantidad]="item.cantidad"
+            [producto]="item.producto"
+            [cajero]="item.cajero"
+            [total]="item.total">
+          </app-item-list-venta> 
         </div>
       </div>
       <div class="container-bottom">
         <p>Total de venta:</p>
         <div class="component-bottom">
-          <p></p>
+          <p>{{totalVentas}}</p>
         </div>
       </div>
       <div class="container-boton">
-        <button class="boton">Generar Reporte</button>
+        <app-button-success [texto]="'Generar Reporte'" (click)="generatePDF()"></app-button-success>
       </div>
     </div>
   </main>

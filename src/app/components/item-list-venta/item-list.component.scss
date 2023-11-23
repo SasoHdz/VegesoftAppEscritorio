@@ -1,0 +1,23 @@
+.container-center .datos-tabla {
+  display: flex;
+  justify-content: space-around;
+  width: 1140px;
+}
+
+.component-tabla {
+  display: flex;
+  justify-content: space-around;
+  width: 1140px;
+}
+
+.component-tabla td{
+  background-color: #fff;
+  text-align: center;
+  width: 150px;
+  height: 35px;
+  font-size: 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border-style: none;
+  padding-top: 5px;
+}

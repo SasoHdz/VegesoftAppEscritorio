@@ -38,6 +38,7 @@ main {
 
 .container-input-top {
   display: flex;
+  width: 1140px;
   height: 60px;
   background-color: #DFDDC5;
   margin: 1rem 0 1rem 0;
@@ -62,48 +63,39 @@ main {
 
 .container-center {
   background-color: #DFDDC5;
-  width: 100%;
-  height: 45%;
+  overflow-y: scroll;
+  width: 1140px;
+  height: 300px;
+  font-size: 15px;
+}
+
+.container-center .titulos-tabla {
+  margin: 10px 0;
   display: flex;
   justify-content: space-around;
+  width: 1140px;
+}
+
+.titulos-tabla td {
+  width: 120px;
   text-align: center;
-}
-
-.container-center p {
-  margin-top: 10px;
-}
-
-.container-center .component {
-  width: 150px;
-  margin: 0px 0 5px 0;
-  border-radius: 5px;
-  border-style: none;
   font-size: 15px;
-}
-
-.container-center .com-cen {
-  background-color: #fff;
-  font-size: 15px;
-  margin: 5px 0;
-  height: 25px;
-  border-radius: 5px;
-  border-style: none;
-}
-
-.container-center .com-cen p {
-  margin: 0;
-  padding: 5px 0 0 0;
 }
 
 .container-bottom {
-  display: flex;
+  width: 1140px;
   height: 60px;
+  display: flex;
   background-color: #DFDDC5;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0 1rem 0;
   justify-content: left;
   align-items: center;
   padding: 0 0 0 1rem;
   font-size: 15px;
+}
+
+.container-bottom p {
+  margin: 0;
 }
 
 .component-bottom {
