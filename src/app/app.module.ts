@@ -19,6 +19,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { CampoFormComponent } from './components/campo-form/campo-form.component';
 import { ButtonSuccessComponent } from './components/button-success/button-success.component';
 import { ButtonStopComponent } from './components/button-stop/button-stop.component';
+import { ItemVentaComponent } from './components/item-venta/item-venta.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ButtonStopComponent } from './components/button-stop/button-stop.compon
     LayoutComponent,
     CampoFormComponent,
     ButtonSuccessComponent,
-    ButtonStopComponent
+    ButtonStopComponent,
+    ItemVentaComponent
   ],
   imports: [
     BrowserModule,

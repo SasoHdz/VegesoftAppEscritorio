@@ -1,1 +1,48 @@
-<p>iniciar works!</p>
+<main>
+  <app-menu-vertical></app-menu-vertical>
+  <div class="container-man">
+    <app-header [titulo]="'VEGESOFT'"></app-header>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-7 d-flex flex-column align-items-center">
+          <div class="productos p-3">
+            <table>
+              <thead class="w-full">
+                <tr class="d-flex justify-content-between bg-gray">
+                  <th scope="col">ID:</th>
+                  <th scope="col">Producto:</th>
+                  <th scope="col">Cantidad:</th>
+                </tr>
+              </thead>
+              <tbody>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+
+              </tbody>
+            </table>
+          </div>
+          <app-button-success [texto]="'Generar Ticket'" class="mt-4"></app-button-success>
+        </div>
+        <div class="col-5 d-flex flex-column align-items-center text-center">
+          <i class="bi bi-card-image image"></i>
+          <div class="producto mb-3 text-center">
+            <label class="mt-1" for="">
+              Producto:
+            </label>
+            <label for=""></label>
+          </div>
+          <div class="descProducto text-center">
+            <label class="mt-1" for="">Descripcion:</label>
+            <label for=""></label>
+          </div>
+          <h2 class="mt-2">Total  <br> $200.00 </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -9,15 +9,25 @@ button {
   background: #10455b;
 
   color: var(--default-white, #fff);
-  text-align: right;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
+<<<<<<< HEAD
   transition: all 0.5s linear;
 }
 
 button:hover {
   transform: scale(1.02);
+=======
+
+  border:none;
+}
+
+button:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: 0.5s;
+>>>>>>> 1ed43e756c0673c77476816fa3792cd45a0f2f72
 }
