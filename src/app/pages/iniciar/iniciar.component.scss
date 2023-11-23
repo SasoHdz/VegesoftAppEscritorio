@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mooli&family=Nunito:wght@300;900&family=Poppins:wght@300;800&family=Raleway:wght@200&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.container-man {
+  flex: 4;
+  width: 80%; /* Ocupa el 75% del ancho total */
+  height: 100vh;
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+
+.col {
+  height: 530px;
+}
+
+.productos {
+  width: 88%;
+  height: 458px;
+  flex-shrink: 0;
+  background: #DFDDC5;
+}
+
+table {
+  width: 100%;
+  padding: 0;
+
+  tbody {
+    height: 390px;
+    overflow-y: scroll;
+  }
+}
+
+
+
+

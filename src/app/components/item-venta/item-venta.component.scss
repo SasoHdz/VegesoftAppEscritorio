@@ -1,0 +1,43 @@
+
+ td {
+  background-color: #F8FEFA;
+  width: 170px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+th {
+  background-color: #F8FEFA;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.cantidad {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  height: 35px;
+  justify-content: space-around;
+  width: 140px;
+
+  input {
+    width: 70%;
+    height: 90%;
+    border-radius: 5px;
+    border: none;
+  }
+
+  i {
+    font-size: 1.25rem;
+    color: #10455B;
+  }
+
+  i:hover {
+    color:rgb(240, 52, 19);
+    cursor: pointer;
+  }
+}

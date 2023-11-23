@@ -1,1 +1,35 @@
-<p>iniciar works!</p>
+<main>
+  <app-menu-vertical></app-menu-vertical>
+  <div class="container-man">
+    <app-header [titulo]="'VEGESOFT'"></app-header>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-7 d-flex flex-column align-items-center">
+          <div class="productos p-3">
+            <table>
+              <thead class="w-full">
+                <tr class="d-flex justify-content-between bg-gray">
+                  <th scope="col">ID:</th>
+                  <th scope="col">Producto:</th>
+                  <th scope="col">Cantidad:</th>
+                </tr>
+              </thead>
+              <tbody>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+               <app-item-venta></app-item-venta>
+
+              </tbody>
+            </table>
+          </div>
+          <app-button-success [texto]="'Generar Ticket'" class="mt-4"></app-button-success>
+        </div>
+        <div class="col-5 bg-warning">dd</div>
+      </div>
+    </div>
+  </div>
+</main>
