@@ -15,6 +15,9 @@ export class HistorialComponent {
   totalVentas: number = 0;
 
   word = ""
+  word2 = ""
+  word3 = ""
+
   Ventasproductos: Ventas[] = [
     new Ventas("12:00", 10, "Manzanas", "Emmanuel", 255),
     new Ventas("12:30", 50, "Fresas", "Emmanuel", 1050),
@@ -28,10 +31,34 @@ export class HistorialComponent {
 
   venta: Ventas[] = [...this.Ventasproductos]
 
-  searchVenta() {
+  searchVentaProducto() {
     if (this.word.trim() !== "") {
       this.venta = this.Ventasproductos.filter(venta =>
-        venta.producto.toLowerCase().includes(this.word.toLowerCase())
+        venta.producto.toLowerCase().includes(this.word.toLowerCase()) 
+      );
+    } else {
+      this.venta= [...this.Ventasproductos];
+    }
+
+    this.totalVentas = this.venta.reduce((total, venta) => total + venta.total, 0);
+  }
+
+  searchVentaCajero() {
+    if (this.word2.trim() !== "") {
+      this.venta = this.Ventasproductos.filter(venta =>
+        venta.cajero.toLowerCase().includes(this.word2.toLowerCase()) 
+      );
+    } else {
+      this.venta= [...this.Ventasproductos];
+    }
+
+    this.totalVentas = this.venta.reduce((total, venta) => total + venta.total, 0);
+  }
+
+  searchVentaHora() {
+    if (this.word3.trim() !== "") {
+      this.venta = this.Ventasproductos.filter(venta =>
+        venta.hora.toLowerCase().includes(this.word3.toLowerCase()) 
       );
     } else {
       this.venta= [...this.Ventasproductos];

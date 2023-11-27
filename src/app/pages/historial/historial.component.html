@@ -4,11 +4,11 @@
       <app-header [titulo]="'HISTORIAL'"></app-header>
       <div class="container-input-top">
         <p>Fecha:</p>
-        <input type="text" name="fecha" placeholder="Fecha">
+        <input type="text" name="fecha" placeholder="Fecha" [(ngModel)]="word3" (ngModelChange)="searchVentaHora()">
         <p>Producto:</p>
-        <input type="text" name="producto" placeholder="Producto" [(ngModel)]="word" (ngModelChange)="searchVenta()">
+        <input type="text" name="producto" placeholder="Producto" [(ngModel)]="word" (ngModelChange)="searchVentaProducto()">
         <p>Cajero:</p>
-        <input type="text" name="cajero" placeholder="Cajero">
+        <input type="text" name="cajero" placeholder="Cajero" [(ngModel)]="word2" (ngModelChange)="searchVentaCajero()">
       </div>
       <div class="container-center">
         <div class="tabla">
