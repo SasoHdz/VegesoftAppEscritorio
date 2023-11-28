@@ -34,7 +34,8 @@ export class ConfigComponent {
   searchProduct() {
     if (this.word.trim() !== "") {
       this.productos = this.productosBase.filter(producto =>
-        producto.desc.toLowerCase().includes(this.word.toLowerCase())
+        producto.desc.toLowerCase().includes(this.word.toLowerCase()) ||
+        producto.id.toLowerCase().includes(this.word.toLowerCase())
       );
     } else {
       this.productos = [...this.productosBase];
