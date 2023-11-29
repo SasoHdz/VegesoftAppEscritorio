@@ -3,27 +3,34 @@
   <div class="container-man">
     <app-header [titulo]="'INVENTARIO'"></app-header>
     <div class="row">
-      <input class="input" type="text" placeholder="Buscar ...">
+      <input
+        class="input"
+        type="text"
+        placeholder="Buscar ..."
+        [(ngModel)]="word"
+        (ngModelChange)="searchProduct()"
+      />
       <div class="productos p-3">
         <table>
           <thead class="w-full">
             <tr class="d-flex justify-content-between bg-gray">
-              <th scope="col">ID:</th>
+              <th scope="col" class="id">ID:</th>
               <th scope="col">Producto:</th>
               <th scope="col">Cantidad:</th>
               <th scope="col">Unidad Medida:</th>
               <th scope="col">Precio:</th>
-
             </tr>
           </thead>
           <tbody>
-            <app-item-venta></app-item-venta>
-            <app-item-venta></app-item-venta>
-            <app-item-venta></app-item-venta>
-            <app-item-venta></app-item-venta>
-            <app-item-venta></app-item-venta>
-            <app-item-venta></app-item-venta>
-            <app-item-venta></app-item-venta>
+            <div class="items">
+              <app-item-inventario
+                *ngFor="let item of productos"
+                [id]="item.id"
+                [name]="item.name"
+                [cantidad]="item.cantidad"
+                [unidad]="item.unidad"
+              ></app-item-inventario>
+            </div>
           </tbody>
         </table>
       </div>
@@ -34,4 +41,3 @@
     </div>
   </div>
 </main>
-

@@ -5,13 +5,15 @@ export class Producto {
     precioU: number = 0
     descripcion: string = ""
     desc: string = ""
+    cantidad: number = 10
 
-    constructor(name: string, id: string, unidad: string, precioU: number, descripcion: string) {
+    constructor(name: string, id: string, unidad: string, precioU: number,cantidad:number ,descripcion: string) {
       this.name = name;
       this.id = id;
       this.unidad = unidad;
       this.precioU = precioU;
       this.descripcion = descripcion;
+      this.cantidad = cantidad
       this.desc = `${this.name}. ${this.descripcion}. ${this.precioU}$ X ${this.unidad}`;
     }
 
