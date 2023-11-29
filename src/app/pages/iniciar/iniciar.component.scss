@@ -38,6 +38,16 @@ table {
     height: 390px;
     overflow-y: scroll;
   }
+
+  thead > tr >th {
+    width: 120px;
+    text-align: center;
+  }
+
+  .id {
+    text-align: start;
+    width: 80px !important;
+  }
 }
 
 .image {
@@ -50,13 +60,13 @@ table {
 
 .producto {
   width: 90%;
-  height: 50px;
+  height: 60px;
   background-color: #DFDDC5;
 }
 
 .descProducto {
   width: 90%;
-  height: 150px;
+  height: 140px;
   background-color: #DFDDC5;
 }
 
@@ -67,4 +77,17 @@ video {
   border-radius: 5px;
 }
 
+.custom-confirm-class {
+  background-color: #10455B !important;
+}
 
+.image-detected {
+  width: 220px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+  background-color: #10455B;
+}

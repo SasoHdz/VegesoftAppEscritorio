@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Producto } from 'src/app/Models/Producto';
+import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
+import { jsPDF } from 'jspdf';
+import 'jspdf-autotable';
 
 @Component({
   selector: 'app-inventario',
@@ -7,6 +10,7 @@ import { Producto } from 'src/app/Models/Producto';
   styleUrls: ['./inventario.component.scss']
 })
 export class InventarioComponent {
+  @ViewChild('reporte') miSwal!: SwalComponent;
 
   word = ""
   productosBase: Producto[] = [
@@ -36,6 +40,38 @@ export class InventarioComponent {
     } else {
       this.productos = [...this.productosBase];
     }
+  }
+
+  generatePDF() {
+    const doc = new jsPDF();
+
+    // Encabezado
+    doc.text('Reporte de Ventas - Vegesoft', 70, 10);
+
+
+    // Contenido
+    this.productos.forEach((venta, index) => {
+      const yPos = 20 + index * 10;
+      doc.text(`Producto: ${venta.name}, Total: ${venta.cantidad} ${venta.precioU}`, 20, yPos);
+    });
+
+    // Guardar o mostrar el PDF
+    doc.save('inventario-vegesoft.pdf');
+  }
+
+
+  async abrirAlerta() {
+    this.miSwal.swalOptions ={
+      position: "top-end",
+      icon: "success",
+      title: "Reporte generado",
+      showConfirmButton: false,
+      timer: 1500
+    };
+
+    await this.miSwal.fire().then((result) => {
+      this.generatePDF()
+    });
   }
 
 

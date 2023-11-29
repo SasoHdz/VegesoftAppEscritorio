@@ -35,8 +35,10 @@
         </div>
       </div>
       <div class="container-boton">
-        <app-button-success [texto]="'Generar Reporte'" (click)="generatePDF()"></app-button-success>
+        <app-button-success [texto]="'Generar Reporte'" (click)="abrirAlerta()"></app-button-success>
       </div>
     </div>
+    <swal #reporte ></swal>
+
   </main>
 

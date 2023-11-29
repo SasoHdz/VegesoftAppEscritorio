@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Ventas } from 'src/app/Models/Ventas';
+import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { jsPDF } from 'jspdf';
 import 'jspdf-autotable';
 
@@ -8,7 +9,8 @@ import 'jspdf-autotable';
   templateUrl: './historial.component.html',
   styleUrls: ['./historial.component.scss']
 })
-export class HistorialComponent {
+export class HistorialComponent implements OnInit{
+  @ViewChild('reporte') miSwal!: SwalComponent;
   newVentas: Ventas = new Ventas("",0,"","",0);
   validarForm: boolean = true;
 
@@ -34,7 +36,7 @@ export class HistorialComponent {
   searchVentaProducto() {
     if (this.word.trim() !== "") {
       this.venta = this.Ventasproductos.filter(venta =>
-        venta.producto.toLowerCase().includes(this.word.toLowerCase()) 
+        venta.producto.toLowerCase().includes(this.word.toLowerCase())
       );
     } else {
       this.venta= [...this.Ventasproductos];
@@ -46,7 +48,7 @@ export class HistorialComponent {
   searchVentaCajero() {
     if (this.word2.trim() !== "") {
       this.venta = this.Ventasproductos.filter(venta =>
-        venta.cajero.toLowerCase().includes(this.word2.toLowerCase()) 
+        venta.cajero.toLowerCase().includes(this.word2.toLowerCase())
       );
     } else {
       this.venta= [...this.Ventasproductos];
@@ -58,7 +60,7 @@ export class HistorialComponent {
   searchVentaHora() {
     if (this.word3.trim() !== "") {
       this.venta = this.Ventasproductos.filter(venta =>
-        venta.hora.toLowerCase().includes(this.word3.toLowerCase()) 
+        venta.hora.toLowerCase().includes(this.word3.toLowerCase())
       );
     } else {
       this.venta= [...this.Ventasproductos];
@@ -69,19 +71,36 @@ export class HistorialComponent {
 
   generatePDF() {
     const doc = new jsPDF();
-  
+
     // Encabezado
     doc.text('Reporte de Ventas - Vegesoft', 70, 10);
-    
-  
+
+
     // Contenido
     this.venta.forEach((venta, index) => {
       const yPos = 20 + index * 10;
       doc.text(`Producto: ${venta.producto}, Total: ${venta.total}`, 20, yPos);
     });
-  
+
     // Guardar o mostrar el PDF
     doc.save('reporte_ventas.pdf');
   }
-  
+
+  ngOnInit(): void {
+    this.totalVentas = this.venta.reduce((total, venta) => total + venta.total, 0);
+  }
+
+  async abrirAlerta() {
+    this.miSwal.swalOptions ={
+      position: "top-end",
+      icon: "success",
+      title: "Reporte generado",
+      showConfirmButton: false,
+      timer: 1500
+    };
+
+    await this.miSwal.fire().then((result) => {
+      this.generatePDF()
+    });
+  }
 }

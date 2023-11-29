@@ -8,48 +8,57 @@
           <div class="productos p-3">
             <table>
               <thead class="w-full">
-                <tr class="d-flex justify-content-between bg-gray">
-                  <th scope="col">ID:</th>
+                <tr class="d-flex justify-content-around bg-gray">
+                  <th class="id" scope="col">ID:</th>
                   <th scope="col">Producto:</th>
                   <th scope="col">Cantidad:</th>
                 </tr>
               </thead>
-              <tbody>
-                <app-item-venta></app-item-venta>
-                <app-item-venta></app-item-venta>
-                <app-item-venta></app-item-venta>
-                <app-item-venta></app-item-venta>
-                <app-item-venta></app-item-venta>
-                <app-item-venta></app-item-venta>
-                <app-item-venta></app-item-venta>
+              <tbody *ngIf="venta.length > 1; else vacio">
+                <app-item-venta
+                  *ngFor="let item of venta"
+                  [id]="item.id"
+                  [cantidad]="item.cantidad"
+                  [name]="item.producto"
+                ></app-item-venta>
               </tbody>
+              <ng-template #vacio>
+                <tbody>
+                  <app-item-venta></app-item-venta>
+                </tbody>
+              </ng-template>
             </table>
           </div>
           <app-button-success
             [texto]="'Generar Ticket'"
             class="mt-4"
+            (click)="abrirAlerta()"
           ></app-button-success>
         </div>
         <div class="col-5 d-flex flex-column align-items-center text-center">
           <div class="container">
-            <video #videoElement autoplay playsinline></video>
+            <div
+              class="image-detected"
+              [style]="'background-image: url(' + currentState.image + ');'"
+            ></div>
           </div>
           <!--           <i class="bi bi-card-image image"></i>
  -->
-          <div class="producto mb-3 text-center">
-            <label class="mt-1" for=""> Producto: </label>
-            <label for=""></label>
+          <div class="producto mb-3 text-center d-flex flex-column">
+            <label class="mt-1 fw-bold" for=""> Producto: </label>
+            <label for="">{{
+              currentState.producto + ": $" + currentState.precio
+            }}</label>
           </div>
-          <div class="descProducto text-center">
-            <label class="mt-1" for="">Descripcion:</label>
-            <label for=""></label>
+          <div class="descProducto text-center d-flex flex-column">
+            <label class="mt-1 fw-bold" for="">Descripcion:</label>
+            <label class="mt-2" for="">{{ currentState.descripcion }}</label>
           </div>
-          <h2 class="mt-2">
-            Total <br />
-            $200.00
-          </h2>
+          <h2 class="text-center mt-2">Total : ${{ total }}</h2>
         </div>
       </div>
     </div>
   </div>
+  <swal #miSwal title="Multiple inputs" (confirm)="onConfirm($event)"> </swal>
+  <swal #swalCambio title="Multiple inputs" (confirm)="onConfirm($event)"> </swal>
 </main>
