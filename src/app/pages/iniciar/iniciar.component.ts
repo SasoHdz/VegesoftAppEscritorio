@@ -99,7 +99,7 @@ export class IniciarComponent implements OnInit {
 
     // Ejecutar la función updateState inicialmente y luego cada 10 segundos
     updateState(); // Ejecutar inmediatamente al cargar la página
-    setInterval(updateState, 10000); // Ejecutar cada 10 segundos (en milisegundos)
+    setInterval(updateState, 3000); // Ejecutar cada 10 segundos (en milisegundos)
   }
 
   // ...otros métodos y propiedades
